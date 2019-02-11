@@ -1,6 +1,4 @@
-import sys
-from feedback import Feedback
-fb = Feedback()
+import sys, json
 
 valLst = [1000, 900, 500, 400, 100, 90, 50, 40,
     10, 9, 5, 4, 1]
@@ -48,22 +46,31 @@ def convert(query):
         queryUp = query.upper()
         convInt = romanToInt(queryUp)
         if convInt == "ERROR":
-            return "Cannot evaluate expression", query
+            return "Cannot evaluate expression", query, False
         else:
             # Check that it is valid roman numeral and not i.e. "IC"
             # by converting back to roman and see if we get the original
             convRoman = intToRoman(int(convInt))
             if not(queryUp == convRoman):
-                return "Not a valid roman number", query
-            return convInt, "Roman to arabic"
+                return "Not a valid roman number", query, False
+            return convInt, "Roman to arabic", True
     else: # Arabic integer to Roman numeral
         if num < 1:
-            return "Can't convert 0 and negative numbers", query
+            return "Can't convert 0 and negative numbers", query, False
         elif num > 3999:
-            return "Numbers greater than 3999 are not represented", query
-        return intToRoman(num), "Arabic to roman"
+            return "Numbers greater than 3999 are not represented", query, False
+        return intToRoman(num), "Arabic to roman", True
 
+
+# Get the query and output to Alfred in JSON-format
 query = sys.argv[1]
-title, subtitle = convert(query)
-fb.add_item(title, subtitle, arg=title)
-print(fb)
+title, subtitle, valid = convert(query)
+jsonResult = json.dumps({"items": [
+    {
+        "title": title,
+        "subtitle": subtitle,
+        "arg": title,
+        "valid": valid
+    }
+]})
+print(jsonResult)

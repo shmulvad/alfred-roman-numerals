@@ -19,12 +19,8 @@ The workflow doesn't support incorrectly written roman numerals, i.e. "IC", and 
 ![invalid roman](images/invalid_roman.png?raw=true "")
 
 ## Credits
-The workflow makes use of the following code to focus on the implementation of the conversion between the number systems rather than focusing on a lot of Alfred Workflow related stuff. 
-
-1. [OneUpdater][3] to easily check for updates by vitorgalvao
-2. [Alfred Workflow Feedback XML Generation][4] to easily add items by lrrfantasy.
+The workflow makes use of [OneUpdater][3] by vitorgalvao to focus on the implementation of the conversion between the number systems rather than code related to updating.
 
 [1]: https://www.alfredapp.com/
 [2]: https://github.com/shmulvad/alfred-roman-numerals/releases/latest
 [3]: https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater
-[4]: https://github.com/lrrfantasy/alfred-feedback-xml-generation
