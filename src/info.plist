@@ -243,8 +243,7 @@ NOTE:
 The workflow doesn't support incorrectly written roman numerals, i.e. "IC", and will also notify user about this
 
 CREDITS:
-OneUpdater by Vítor Galvão.
-Alfred Workflow Feedback XML Generation by Ruoran Liu.</string>
+OneUpdater by Vítor Galvão.</string>
 	<key>uidata</key>
 	<dict>
 		<key>397BE956-AD53-408D-BF2C-113628DE4ABD</key>
@@ -281,7 +280,7 @@ Alfred Workflow Feedback XML Generation by Ruoran Liu.</string>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.0.1</string>
+	<string>1.0.2</string>
 	<key>webaddress</key>
 	<string>www.shmulvad.com</string>
 </dict>
