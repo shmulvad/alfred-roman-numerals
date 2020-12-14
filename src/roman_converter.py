@@ -61,8 +61,10 @@ def convert(query: str) -> Tuple[str, str, bool]:
         if num < 1:
             return "Can't convert 0 and negative numbers", query, False
         elif num > 3999:
-            return 'Numbers greater than 3999 are not represented', query, False
-        return int_to_roman(num), 'Arabic to roman', True
+            return 'Numbers greater than 3999 are not represented', \
+                query, False
+        else:
+            return int_to_roman(num), 'Arabic to roman', True
 
 
 # Get the query and output to Alfred in JSON-format
