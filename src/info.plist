@@ -95,7 +95,7 @@
 				<key>runningsubtext</key>
 				<string>Calculating...</string>
 				<key>script</key>
-				<string>/usr/bin/python romanConverter.py "{query}"</string>
+				<string>/usr/bin/python roman_converter.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -231,7 +231,7 @@ fi</string>
 	</array>
 	<key>readme</key>
 	<string>ROMAN NUMERALS:
-A simple Alfred 3 workflow for converting between roman numerals and arabic integers written in Python. Action item to copy result to clipboard. If you write some gibberish that can't be parsed, the workflow will notify about this.
+A simple Alfred workflow for converting between roman numerals and arabic integers written in Python. Action item to copy result to clipboard. If you write some gibberish that can't be parsed, the workflow will notify about this.
 
 Updates are handled automatically.
 
